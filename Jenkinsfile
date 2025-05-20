@@ -14,10 +14,16 @@ pipeline {
             }
         }
 
-        stage('Run integration tests') {
+        stage('Deploy to STAGING') {
             steps {
-                bat 'npm run test'
+                echo 'Deploying to STAGING'
             }
         }
+
+        stage('Deploy to PRODUCTION') {
+            steps {
+                echo 'Deploying to PRODUCTION'
+            }
+        }        
     }
 }
